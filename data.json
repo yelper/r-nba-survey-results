@@ -1,0 +1,818 @@
+{
+	"questions": [
+		{
+			"key": "bball_rl",
+			"title": "Talk basketball in real-life",
+			"desc": "(at least once a week)",
+			"data": [
+				{
+					"key": 0,
+					"name": "No",
+					"value": 63
+				},
+				{
+					"key": 1,
+					"name": "Yes",
+					"value": 668
+				}
+			]
+		},
+		{
+			"key": "online_social",
+			"title": "Participation in other online communities",
+			"desc": "(e.g. video games, forums, social media)",
+			"data": [
+				{
+					"key": 0,
+					"name": "No",
+					"value": 290
+				},
+				{
+					"key": 1,
+					"name": "Yes",
+					"value": 441
+				}
+			]
+		},
+		{
+			"key": "league_aware1",
+			"title": "How often do you watch NBA highlights?",
+			"desc": "Whether curated by the NBA, from the frontpage of /r/nba, or a third-party (e.g. Dawkins)",
+			"data": [
+				{
+					"key": 1,
+					"name": "Never (less than once a month)",
+					"value": 2
+				},
+				{
+					"key": 2,
+					"name": "Rarely (less than once every two weeks)",
+					"value": 13
+				},
+				{
+					"key": 3,
+					"name": "Occasionally (once/twice a week)",
+					"value": 85
+				},
+				{
+					"key": 4,
+					"name": "Often (nearly every day)",
+					"value": 282
+				},
+				{
+					"key": 5,
+					"name": "Daily",
+					"value": 349
+				}
+			]
+		},
+		{
+			"key": "league_aware2",
+			"title": "Do you feel like you are up-to-date with the NBA?",
+			"data": [
+				{
+					"key": 1,
+					"name": "Strongly disagree",
+					"value": 0
+				},
+				{
+					"key": 2,
+					"name": "",
+					"value": 3
+				},
+				{
+					"key": 3,
+					"name": "",
+					"value": 9
+				},
+				{
+					"key": 4,
+					"name": "Neutral",
+					"value": 29
+				},
+				{
+					"key": 5,
+					"name": "",
+					"value": 114
+				},
+				{
+					"key": 6,
+					"name": "",
+					"value": 210
+				},
+				{
+					"key": 7,
+					"name": "Strongly agree",
+					"value": 366
+				}
+			]
+		},
+		{
+			"key": "league_aware3",
+			"title": "Do you think you would do well in a fantasy league?",
+			"desc": "Even if you don't play, think about how well you know the status of players across the league",
+			"data": [
+				{
+					"key": 1,
+					"name": "Strongly disagree",
+					"value": 11
+				},
+				{
+					"key": 2,
+					"name": "",
+					"value": 37
+				},
+				{
+					"key": 3,
+					"name": "",
+					"value": 63
+				},
+				{
+					"key": 4,
+					"name": "Neutral",
+					"value": 131
+				},
+				{
+					"key": 5,
+					"name": "",
+					"value": 250
+				},
+				{
+					"key": 6,
+					"name": "",
+					"value": 148
+				},
+				{
+					"key": 7,
+					"name": "Strongly agree",
+					"value": 91
+				}
+			]
+		},
+		{
+			"key": "league_aware4",
+			"title": "Do you feel like you miss some personnel changes in the NBA?",
+			"data": [
+				{
+					"key": 1,
+					"name": "Strongly disagree",
+					"value": 111
+				},
+				{
+					"key": 2,
+					"name": "",
+					"value": 206
+				},
+				{
+					"key": 3,
+					"name": "",
+					"value": 147
+				},
+				{
+					"key": 4,
+					"name": "Neutral",
+					"value": 112
+				},
+				{
+					"key": 5,
+					"name": "",
+					"value": 88
+				},
+				{
+					"key": 6,
+					"name": "",
+					"value": 49
+				},
+				{
+					"key": 7,
+					"name": "Strongly agree",
+					"value": 18
+				}
+			]
+		},
+		{
+			"key": "league_aware5",
+			"title": "Would you say you miss stellar performances of players not on your favorite team?",
+			"data": [
+				{
+					"key": 1,
+					"name": "Strongly disagree",
+					"value": 149
+				},
+				{
+					"key": 2,
+					"name": "",
+					"value": 159
+				},
+				{
+					"key": 3,
+					"name": "",
+					"value": 128
+				},
+				{
+					"key": 4,
+					"name": "Neutral",
+					"value": 108
+				},
+				{
+					"key": 5,
+					"name": "",
+					"value": 111
+				},
+				{
+					"key": 6,
+					"name": "",
+					"value": 51
+				},
+				{
+					"key": 7,
+					"name": "Strongly agree",
+					"value": 30
+				}
+			]
+		},
+		{
+			"key": "league_aware6",
+			"title": "Do you like staying on top of ongoing stories in the NBA?",
+			"data": [
+				{
+					"key": 1,
+					"name": "Strongly disagree",
+					"value": 2
+				},
+				{
+					"key": 2,
+					"name": "",
+					"value": 5
+				},
+				{
+					"key": 3,
+					"name": "",
+					"value": 18
+				},
+				{
+					"key": 4,
+					"name": "Neutral",
+					"value": 38
+				},
+				{
+					"key": 5,
+					"name": "",
+					"value": 91
+				},
+				{
+					"key": 6,
+					"name": "",
+					"value": 164
+				},
+				{
+					"key": 7,
+					"name": "Strongly agree",
+					"value": 413
+				}
+			]
+		},
+		{
+			"key": "socia1",
+			"title": "Do you feel like submitting content is an important way to feel part of /r/nba?",
+			"data": [
+				{
+					"key": 1,
+					"name": "Strongly disagree",
+					"value": 173
+				},
+				{
+					"key": 2,
+					"name": "",
+					"value": 191
+				},
+				{
+					"key": 3,
+					"name": "",
+					"value": 120
+				},
+				{
+					"key": 4,
+					"name": "Neutral",
+					"value": 116
+				},
+				{
+					"key": 5,
+					"name": "",
+					"value": 64
+				},
+				{
+					"key": 6,
+					"name": "",
+					"value": 28
+				},
+				{
+					"key": 7,
+					"name": "Strongly agree",
+					"value": 39
+				}
+			]
+		},
+		{
+			"key": "socia2",
+			"title": "Do you think commenting in game threads is an important way to be a part of /r/nba?",
+			"data": [
+				{
+					"key": 1,
+					"name": "Strongly disagree",
+					"value": 130
+				},
+				{
+					"key": 2,
+					"name": "",
+					"value": 145
+				},
+				{
+					"key": 3,
+					"name": "",
+					"value": 109
+				},
+				{
+					"key": 4,
+					"name": "Neutral",
+					"value": 99
+				},
+				{
+					"key": 5,
+					"name": "",
+					"value": 123
+				},
+				{
+					"key": 6,
+					"name": "",
+					"value": 73
+				},
+				{
+					"key": 7,
+					"name": "Strongly agree",
+					"value": 53
+				}
+			]
+		},
+		{
+			"key": "social3",
+			"title": "Is a joke a good way to engage and enable conversation with others in /r/nba?",
+			"data": [
+				{
+					"key": 1,
+					"name": "Strongly disagree",
+					"value": 26
+				},
+				{
+					"key": 2,
+					"name": "",
+					"value": 28
+				},
+				{
+					"key": 3,
+					"name": "",
+					"value": 64
+				},
+				{
+					"key": 4,
+					"name": "Neutral",
+					"value": 129
+				},
+				{
+					"key": 5,
+					"name": "",
+					"value": 193
+				},
+				{
+					"key": 6,
+					"name": "",
+					"value": 161
+				},
+				{
+					"key": 7,
+					"name": "Strongly agree",
+					"value": 130
+				}
+			]
+		},
+		{
+			"key": "social4",
+			"title": "Do you like to comment in game threads?",
+			"data": [
+				{
+					"key": 1,
+					"name": "Strongly disagree",
+					"value": 198
+				},
+				{
+					"key": 2,
+					"name": "",
+					"value": 111
+				},
+				{
+					"key": 3,
+					"name": "",
+					"value": 97
+				},
+				{
+					"key": 4,
+					"name": "Neutral",
+					"value": 109
+				},
+				{
+					"key": 5,
+					"name": "",
+					"value": 112
+				},
+				{
+					"key": 6,
+					"name": "",
+					"value": 60
+				},
+				{
+					"key": 7,
+					"name": "Strongly agree",
+					"value": 44
+				}
+			]
+		},
+		{
+			"key": "social5",
+			"title": "Do you recognze fellow users and engage in conversation with them?",
+			"data": [
+				{
+					"key": 1,
+					"name": "Strongly disagree",
+					"value": 224
+				},
+				{
+					"key": 2,
+					"name": "",
+					"value": 131
+				},
+				{
+					"key": 3,
+					"name": "",
+					"value": 98
+				},
+				{
+					"key": 4,
+					"name": "Neutral",
+					"value": 101
+				},
+				{
+					"key": 5,
+					"name": "",
+					"value": 100
+				},
+				{
+					"key": 6,
+					"name": "",
+					"value": 35
+				},
+				{
+					"key": 7,
+					"name": "Strongly agree",
+					"value": 22
+				}
+			]
+		},
+		{
+			"key": "env1",
+			"title": "How often do you watch an NBA game?",
+			"desc": "(watching a game for at least 30 minutes at a time)",
+			"data": [
+				{
+					"key": 1,
+					"name": "Never",
+					"value": 3
+				},
+				{
+					"key": 2,
+					"name": "Rarely (1-4 times a season)",
+					"value": 13
+				},
+				{
+					"key": 3,
+					"name": "Infrequent (5-10 times a season)",
+					"value": 38
+				},
+				{
+					"key": 4,
+					"name": "Intermittent (about once every two weeks)",
+					"value": 34
+				},
+				{
+					"key": 5,
+					"name": "Occasionally (about once a week)",
+					"value": 120
+				},
+				{
+					"key": 6,
+					"name": "Often (2-3 times a week)",
+					"value": 366
+				},
+				{
+					"key": 7,
+					"name": "Daily",
+					"value": 157
+				}
+			]
+		},
+		{
+			"key": "env2",
+			"title": "Does purchasing NBA merchandise make you feel part of the NBA family?",
+			"data": [
+				{
+					"key": 1,
+					"name": "Strongly disagree",
+					"value": 182
+				},
+				{
+					"key": 2,
+					"name": "",
+					"value": 123
+				},
+				{
+					"key": 3,
+					"name": "",
+					"value": 94
+				},
+				{
+					"key": 4,
+					"name": "Neutral",
+					"value": 125
+				},
+				{
+					"key": 5,
+					"name": "",
+					"value": 106
+				},
+				{
+					"key": 6,
+					"name": "",
+					"value": 53
+				},
+				{
+					"key": 7,
+					"name": "Strongly agree",
+					"value": 48
+				}
+			]
+		},
+		{
+			"key": "env3",
+			"title": "Do you buy merchandise from NBA.com or from sites like Alibaba/eBay?",
+			"data": [
+				{
+					"key": 1,
+					"name": "Like to buy from third-parties",
+					"value": 213
+				},
+				{
+					"key": 2,
+					"name": "",
+					"value": 69
+				},
+				{
+					"key": 3,
+					"name": "",
+					"value": 83
+				},
+				{
+					"key": 4,
+					"name": "Indifferent/Don't Buy",
+					"value": 210
+				},
+				{
+					"key": 5,
+					"name": "",
+					"value": 79
+				},
+				{
+					"key": 6,
+					"name": "",
+					"value": 29
+				},
+				{
+					"key": 7,
+					"name": "Like to buy from NBA.com",
+					"value": 48
+				}
+			]
+		},
+		{
+			"key": "env5",
+			"title": "Do you feel like you're a part of the NBA family?",
+			"data": [
+				{
+					"key": 1,
+					"name": "Strongly disagree",
+					"value": 64
+				},
+				{
+					"key": 2,
+					"name": "",
+					"value": 74
+				},
+				{
+					"key": 3,
+					"name": "Neutral",
+					"value": 195
+				},
+				{
+					"key": 4,
+					"name": "",
+					"value": 220
+				},
+				{
+					"key": 5,
+					"name": "Strongly agree",
+					"value": 178
+				}
+			]
+		},
+		{
+			"key": "env5",
+			"title": "Is owning NBA Game Pass an important part of the fan experience?",
+			"desc": "Imagine that you have the money to spend :)",
+			"data": [
+				{
+					"key": 1,
+					"name": "Strongly disagree",
+					"value": 254
+				},
+				{
+					"key": 2,
+					"name": "",
+					"value": 89
+				},
+				{
+					"key": 3,
+					"name": "",
+					"value": 62
+				},
+				{
+					"key": 4,
+					"name": "Neutral",
+					"value": 96
+				},
+				{
+					"key": 5,
+					"name": "",
+					"value": 76
+				},
+				{
+					"key": 6,
+					"name": "",
+					"value": 74
+				},
+				{
+					"key": 7,
+					"name": "Strongly agree",
+					"value": 80
+				}
+			]
+		},
+		{
+			"key": "env6",
+			"title": "How often do you attend an NBA game?",
+			"data": [
+				{
+					"key": 1,
+					"name": "Not possible (over 100 miles to nearest stadium)",
+					"value": 196
+				},
+				{
+					"key": 2,
+					"name": "Never (live within 100 miles of an NBA team)",
+					"value": 96
+				},
+				{
+					"key": 3,
+					"name": "Rarely (about once a season)",
+					"value": 222
+				},
+				{
+					"key": 4,
+					"name": "Occasionally (2-4 times a season)",
+					"value": 151
+				},
+				{
+					"key": 5,
+					"name": "Often (5-10 times a season)",
+					"value": 42
+				},
+				{
+					"key": 6,
+					"name": "Many times (10+ times a season)",
+					"value": 24
+				}
+			]
+		}
+	],
+	"ANOVA": [
+		{
+			"key": "current_with_league",
+			"title": "Staying current with the NBA",
+			"desc": "<p>A combination of the scales that ask about staying current with the NBA, separated by responses to the dependent variables of talking basketball in real-life and being part of other online communities.</p><p style='color: #333;'>One is <strong>much less likely</strong> to stay current with the NBA if they do not talk basketball in real-life but are part of other online communities.</p><p>For a two-way ANOVA of bball_rl &times; online_social, <i>F</i>(3, 728) = 4.47, p = 0.035.</p>",
+			"data": [
+				{
+					"key": "0,0",
+                    "name": "Does not talk basketball and not part of other online communities",
+					"bball_rl": 0,
+					"online_social": 0,
+					"mean": 6.075,
+					"stderr": 0.174
+				},
+				{
+					"key": "0,1",
+                    "name": "Does not talk basketball in daily life but part of other online communities",
+					"bball_rl": 0,
+					"online_social": 1,
+					"mean": 5.717,
+					"stderr": 0.202
+				},
+				{
+					"key": "1,0",
+                    "name": "Talks basketball in daily life but not part of other online communities",
+					"bball_rl": 1,
+					"online_social": 0,
+					"mean": 6.158,
+					"stderr": 0.059
+				},
+				{
+					"key": "1,1",
+                    "name": "Talks basketball in daily life and part of other online communities",
+					"bball_rl": 1,
+					"online_social": 1,
+					"mean": 6.302,
+					"stderr": 0.042
+				}
+			],
+			"significance": [
+				{
+					"between": ["1,1", "0,1"],
+					"p_value": 0.004
+				},
+				{
+					"between": ["1,0", "0,1"],
+					"p_value": 0.055
+				}
+			]
+		},
+		{
+			"key": "nba_family",
+			"title": "Feeling like a part of the NBA family",
+			"desc": "<p>A combination of the scales that ask about feeling like a part of the NBA family.</p><p style='color: #333;'>One is <strong>much less likely</strong> to feel like they are a part of the NBA family if they don't talk basketball in real-life.</p><p>For a two-way ANOVA of bball_rl &times; online_social, <i>F</i>(3, 728) = 5.53, p = 0.019.",
+			"data": [
+				{
+					"key": "0,0",
+                    "name": "Does not talk basketball and not part of other online communities",
+					"bball_rl": 0,
+					"online_social": 0,
+					"mean": 3.615,
+					"stderr": 0.237
+				},
+				{
+					"key": "0,1",
+                    "name": "Does not talk basketball in daily life but part of other online communities",
+					"bball_rl": 0,
+					"online_social": 1,
+					"mean": 3.000,
+					"stderr": 0.253
+				},
+				{
+					"key": "1,0",
+                    "name": "Talks basketball in daily life but not part of other online communities",
+					"bball_rl": 1,
+					"online_social": 0,
+					"mean": 3.990,
+					"stderr": 0.093
+				},
+				{
+					"key": "1,1",
+                    "name": "Talks basketball in daily life and part of other online communities",
+					"bball_rl": 1,
+					"online_social": 1,
+					"mean": 4.280,
+					"stderr": 0.072
+				}
+			],
+			"significance": [
+				{
+					"between": ["1,1", "0,1"],
+					"p_value": 0.0001
+				},
+				{
+					"between": ["1,0", "0,1"],
+					"p_value": 0.003
+				},
+				{
+					"between": ["1,1", "0,0"],
+					"p_value": 0.058
+				}
+			]	
+		}
+	]
+}

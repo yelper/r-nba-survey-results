@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>/r/nba Survey on Online Community</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="shortcut icon" type="image/x-icon" href="/~sarikaya/favicon.ico" />
+	
+    <!-- boostrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+	<style type="text/css">
+		.navbar-brand > img {
+            position: relative;
+            top: -7px;
+            padding-right: 15px;
+        }
+		
+		g.bars > rect {
+			stroke: #ccc;
+			stroke-width: 1;
+		}
+		
+		.axis path, .axis line {
+			fill: none;
+			stroke: #222;
+		}
+		
+		.tick text {
+			font-size: 12px;
+		}
+		
+		.tick line {
+			opacity: 0.2;
+		}
+		
+		.categ > tspan {
+			text-anchor: middle;
+		}
+		
+		h4 {
+			color: #aaa;
+			font-size: 14px;
+			margin-bottom: 15px;
+		}
+		
+		.sigLine {
+			stroke: #666;
+			stroke-width: 1;
+			fill: transparent;
+			shape-rendering: crispEdges;			
+		}
+		
+		g.sigs > rect {
+			fill: #fff;
+			stroke: transparent;
+		}
+    
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+            	</button>
+				<a class="navbar-brand" href="#">
+					<img src="icon.png" class="img-responsive pull-left"> 
+					/r/nba Survey on Online Community
+				</a>
+			</div>
+			
+			<div class="colapse navbar-collapse" id="navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li><a href="https://www.reddit.com/r/nba/comments/3tuvh6/help_me_understand_online_communication_in_rnba/" target="_blank">Original Thread</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<div id="graphContainer">
+		
+		</div>
+	</div>	
+	
+	<script type="text/javascript" src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script type="text/javascript" src="colorbrewer.js"></script>
+	<script type='text/javascript' src="app.js"></script>
+</body>
+</html>
+	

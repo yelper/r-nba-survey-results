@@ -814,5 +814,41 @@
 				}
 			]	
 		}
+	],
+	"teams":
+	[
+		{"team": "Atlanta Hawks", "favorite": 15, "rooting": 13},
+		{"team": "Boston Celtics", "favorite": 33, "rooting": 31},
+		{"team": "Brooklyn Nets", "favorite": 4, "rooting": 3},
+		{"team": "Charlotte Hornets", "favorite": 9, "rooting": 9},
+		{"team": "Chicago Bulls", "favorite": 60, "rooting": 53},
+		{"team": "Cleveland Cavaliers", "favorite": 37, "rooting": 50},
+		{"team": "Dallas Mavericks", "favorite": 19, "rooting": 22},
+		{"team": "Denver Nuggets", "favorite": 8, "rooting": 7},
+		{"team": "Detroit Pistons", "favorite": 18, "rooting": 17},
+		{"team": "Golden State Warriors", "favorite": 89, "rooting": 107},
+		{"team": "Houston Rockets", "favorite": 22, "rooting": 17},
+		{"team": "Indiana Pacers", "favorite": 10, "rooting": 8},
+		{"team": "Los Angeles Clippers", "favorite": 14, "rooting": 24},
+		{"team": "Los Angeles Lakers", "favorite": 47, "rooting": 27},
+		{"team": "Memphis Grizzlies", "favorite": 6, "rooting": 6},
+		{"team": "Miami Heat", "favorite": 31, "rooting": 31},
+		{"team": "Milwaukee Bucks", "favorite": 9, "rooting": 15},
+		{"team": "Minnesota Timberwolves", "favorite": 14, "rooting": 27},
+		{"team": "New Jersey Nets", "favorite": 3, "rooting": 0},
+		{"team": "New Orleans Pelicans", "favorite": 5, "rooting": 5},
+		{"team": "New York Knicks", "favorite": 49, "rooting": 61},
+		{"team": "Oklahoma City Thunder", "favorite": 21, "rooting": 25},
+		{"team": "Orlando Magic", "favorite": 4, "rooting": 4},
+		{"team": "Philadelphia 76ers", "favorite": 9, "rooting": 9},
+		{"team": "Phoenix Suns", "favorite": 17, "rooting": 16},
+		{"team": "Portland Trail Blazers", "favorite": 27, "rooting": 25},
+		{"team": "Sacramento Kings", "favorite": 12, "rooting": 14},
+		{"team": "San Antonio Spurs", "favorite": 51, "rooting": 44},
+		{"team": "Seattle Supersonics", "favorite": 3, "rooting": 0},
+		{"team": "Toronto Raptors", "favorite": 36, "rooting": 24},
+		{"team": "Utah Jazz", "favorite": 7, "rooting": 7},
+		{"team": "Washington Wizards", "favorite": 12, "rooting": 11},
+		{"team": "(no selection)", "favorite": 30, "rooting": 19}
 	]
 }

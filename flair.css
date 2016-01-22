@@ -1,6 +1,10 @@
-#teamimgs {
+.teamimgs {
 	float: left;
 	width: 33px;
+}
+
+#teams {
+	float: left;
 }
 
 .flair {
@@ -145,4 +149,16 @@
 
 .flair-hornets:before {
 	background-position: -66px -198px;
+}
+
+.flair-pacers:before {
+	background-position: 0px -220px;
+}
+
+.flair-pistons:before {
+	background-position: -33px -220px;
+}
+
+.flair-none:before {
+	background-position: -66px -220px;
 }

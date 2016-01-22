@@ -274,7 +274,7 @@ d3.json('data.json', (err, data: allData) => {
     
     d3.select("#teamContainer")
         .append('div')
-            .attr('id', "teamimgs")
+            .attr('class', "teamimgs")
         .selectAll("span.flair")
         .data(data.teams.sort((a,b) => b.favorite - a.favorite), d => d.key).enter()
             .append('span')
@@ -284,6 +284,15 @@ d3.json('data.json', (err, data: allData) => {
         .attr("id", "teams")
         .attr('width', 500)
         .attr('height', 850);
+        
+   d3.select("#teamContainer")
+        .append('div')
+            .attr('class', "teamimgs")
+            .style('margin-left', '20px')
+        .selectAll("span.flair")
+        .data(data.teams.sort((a,b) => b.rooting - a.rooting), d => d.key).enter()
+            .append('span')
+            .attr('class', d => 'flair flair-' + d.key);
 
     var maxVal = Math.max(d3.max(data.teams, d => d.rooting), d3.max(data.teams, d => d.favorite));
     var teamHeight = d3.scale.linear()

@@ -184,7 +184,7 @@ d3.json('data.json', function (err, data) {
     });
     d3.select("#teamContainer")
         .append('div')
-        .attr('id', "teamimgs")
+        .attr('class', "teamimgs")
         .selectAll("span.flair")
         .data(data.teams.sort(function (a, b) { return b.favorite - a.favorite; }), function (d) { return d.key; }).enter()
         .append('span')
@@ -193,6 +193,14 @@ d3.json('data.json', function (err, data) {
         .attr("id", "teams")
         .attr('width', 500)
         .attr('height', 850);
+    d3.select("#teamContainer")
+        .append('div')
+        .attr('class', "teamimgs")
+        .style('margin-left', '20px')
+        .selectAll("span.flair")
+        .data(data.teams.sort(function (a, b) { return b.rooting - a.rooting; }), function (d) { return d.key; }).enter()
+        .append('span')
+        .attr('class', function (d) { return 'flair flair-' + d.key; });
     var maxVal = Math.max(d3.max(data.teams, function (d) { return d.rooting; }), d3.max(data.teams, function (d) { return d.favorite; }));
     var teamHeight = d3.scale.linear()
         .domain([0, maxVal]).range([850, margin.bottom]);

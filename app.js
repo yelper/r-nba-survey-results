@@ -182,17 +182,29 @@ d3.json('data.json', function (err, data) {
             .attr('width', function (d) { return d.width + 2 * labelPadding; })
             .attr('height', function (d) { return d.height + 2 * labelPadding; });
     });
+    var teamMouseover = function (d) {
+        d3.selectAll('.flair-' + d.key).style('opacity', 1);
+        d3.select('.team-' + d.key + " > g.teamlabel").style('opacity', 1);
+        d3.select('.team-' + d.key + " > line").style('stroke', '#f00');
+    };
+    var teamMouseout = function (d) {
+        d3.selectAll('.flair-' + d.key).style('opacity', null);
+        d3.select('.team-' + d.key + " > g.teamlabel").style('opacity', 0);
+        d3.select('.team-' + d.key + " > line").style('stroke', '#aaa');
+    };
     d3.select("#teamContainer")
         .append('div')
         .attr('class', "teamimgs")
         .selectAll("span.flair")
         .data(data.teams.sort(function (a, b) { return b.favorite - a.favorite; }), function (d) { return d.key; }).enter()
         .append('span')
-        .attr('class', function (d) { return 'flair flair-' + d.key; });
+        .attr('class', function (d) { return 'flair flair-' + d.key; })
+        .on('mouseover', teamMouseover)
+        .on('mouseout', teamMouseout);
     var teamSVG = d3.select("#teamContainer").append('svg')
         .attr("id", "teams")
         .attr('width', 500)
-        .attr('height', 850);
+        .attr('height', 900);
     d3.select("#teamContainer")
         .append('div')
         .attr('class', "teamimgs")
@@ -200,7 +212,9 @@ d3.json('data.json', function (err, data) {
         .selectAll("span.flair")
         .data(data.teams.sort(function (a, b) { return b.rooting - a.rooting; }), function (d) { return d.key; }).enter()
         .append('span')
-        .attr('class', function (d) { return 'flair flair-' + d.key; });
+        .attr('class', function (d) { return 'flair flair-' + d.key; })
+        .on('mouseover', teamMouseover)
+        .on('mouseout', teamMouseout);
     var maxVal = Math.max(d3.max(data.teams, function (d) { return d.rooting; }), d3.max(data.teams, function (d) { return d.favorite; }));
     var teamHeight = d3.scale.linear()
         .domain([0, maxVal]).range([850, margin.bottom]);
@@ -219,24 +233,49 @@ d3.json('data.json', function (err, data) {
         .attr('class', 'y axis')
         .attr('transform', 'translate(475, -' + margin.bottom + ')')
         .call(teamY);
+    teamSVG.append('text')
+        .attr('x', 175)
+        .attr('y', 850)
+        .attr('dy', "0.71em")
+        .style('text-anchor', 'middle')
+        .text('# favorite team');
+    teamSVG.append('text')
+        .attr('x', 475)
+        .attr('y', 850)
+        .attr('dy', "0.71em")
+        .attr('dx', "1.5em")
+        .style('text-anchor', 'end')
+        .text('# rooting for this year');
     var newTeams = teamSVG.selectAll('g.team')
         .data(data.teams, function (d) { return d.team; }).enter()
         .append('g')
-        .attr('class', 'team')
+        .attr('class', function (d) { return 'team team-' + d.key; })
         .attr('transform', 'translate(0, -' + margin.bottom + ')');
-    newTeams.append('text')
+    var newLabels = newTeams.append('g')
+        .attr('class', 'teamlabel')
+        .style('opacity', 0);
+    newLabels.append('text')
         .attr('x', 170)
         .attr('y', function (d) { return teamHeight(d.favorite); })
         .attr('dy', ".35em")
         .style('text-anchor', 'end')
         .text(function (d) { return d.team; });
+    var labelPadding = 3;
+    newLabels.insert("rect", "text")
+        .datum(function () { return this.nextSibling.getBBox(); })
+        .attr('x', function (d) { return d.x - labelPadding; })
+        .attr('y', function (d) { return d.y - labelPadding; })
+        .attr('width', function (d) { return d.width + 2 * labelPadding; })
+        .attr('height', function (d) { return d.height + 2 * labelPadding; });
     newTeams.append('line')
         .attr('x1', 175)
         .attr('x2', 475)
         .attr('y1', function (d) { return teamHeight(d.favorite); })
         .attr('y2', function (d) { return teamHeight(d.rooting); })
-        .style('stroke', '#f00')
-        .style('stroke-width', 2);
+        .style('stroke', '#aaa')
+        .style('stroke-width', 3)
+        .on('mouseover', teamMouseover)
+        .on('mouseout', teamMouseout);
 });
 console.log("asdfasdfasdf!");
 //# sourceMappingURL=app.js.map

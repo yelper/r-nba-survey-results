@@ -1,5 +1,7 @@
 /// <reference path="d3.d.ts" />
 var colorbrewer;
+// with thanks to <http://bl.ocks.org/mbostock/7555321>
+// and <http://stackoverflow.com/questions/32804813/converting-javascript-function-to-typescript-including-getcomputedtextlength>
 function wrap(text, width) {
     text.each(function () {
         var text = d3.select(this), words = text.text().split(/\s+/).reverse(), word, line = [], lineNumber = 0, lineHeight = 1.1, // ems
@@ -19,7 +21,7 @@ function wrap(text, width) {
     });
 }
 d3.json('data.json', function (err, data) {
-    var newQuestions = d3.select("#graphContainer").selectAll("div.question")
+    var newQuestions = d3.select("#questionContainer").selectAll("div.question")
         .data(data.questions, function (d) { return d.key; }).enter()
         .append('div')
         .attr('class', 'question')
@@ -95,7 +97,7 @@ d3.json('data.json', function (err, data) {
             .text(function (d) { return d.name.trim(); })
             .call(wrap, barBands.rangeBand());
     });
-    var newANOVA = d3.select("#graphContainer").selectAll("div.anova")
+    var newANOVA = d3.select("#anovaContainer").selectAll("div.anova")
         .data(data.ANOVA, function (d) { return d.key; }).enter()
         .append('div')
         .attr('class', 'anova')
@@ -180,6 +182,10 @@ d3.json('data.json', function (err, data) {
             .attr('width', function (d) { return d.width + 2 * labelPadding; })
             .attr('height', function (d) { return d.height + 2 * labelPadding; });
     });
+    var newTeams = d3.select("#teamContainer").append('svg')
+        .attr("id", "teams")
+        .attr('width', 500)
+        .attr('height', 650);
 });
 console.log("asdfasdfasdf!");
 //# sourceMappingURL=app.js.map

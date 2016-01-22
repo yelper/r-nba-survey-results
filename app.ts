@@ -42,6 +42,8 @@ interface allData {
     ANOVA: anovaData[];
 }
 
+// with thanks to <http://bl.ocks.org/mbostock/7555321>
+// and <http://stackoverflow.com/questions/32804813/converting-javascript-function-to-typescript-including-getcomputedtextlength>
 function wrap(text, width) {
   text.each(function() {
     var text = d3.select(this),
@@ -69,7 +71,7 @@ function wrap(text, width) {
 }
 
 d3.json('data.json', (err, data: allData) => {
-    var newQuestions = d3.select("#graphContainer").selectAll("div.question")
+    var newQuestions = d3.select("#questionContainer").selectAll("div.question")
         .data(data.questions, d => d.key).enter()
         .append('div')
             .attr('class', 'question')
@@ -161,7 +163,7 @@ d3.json('data.json', (err, data: allData) => {
             .call(wrap, barBands.rangeBand());
     });
     
-    var newANOVA = d3.select("#graphContainer").selectAll("div.anova")
+    var newANOVA = d3.select("#anovaContainer").selectAll("div.anova")
         .data(data.ANOVA, d => d.key).enter()
         .append('div')
             .attr('class', 'anova')
@@ -261,6 +263,11 @@ d3.json('data.json', (err, data: allData) => {
             .attr('width', d => d.width + 2 * labelPadding)
             .attr('height', d => d.height + 2 * labelPadding);
     });
+    
+    var newTeams = d3.select("#teamContainer").append('svg')    
+        .attr("id", "teams")
+        .attr('width', 500)
+        .attr('height', 650);
 });
 
 console.log("asdfasdfasdf!");

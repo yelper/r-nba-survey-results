@@ -182,10 +182,53 @@ d3.json('data.json', function (err, data) {
             .attr('width', function (d) { return d.width + 2 * labelPadding; })
             .attr('height', function (d) { return d.height + 2 * labelPadding; });
     });
-    var newTeams = d3.select("#teamContainer").append('svg')
+    d3.select("#teamContainer")
+        .append('div')
+        .attr('id', "teamimgs")
+        .selectAll("span.flair")
+        .data(data.teams.sort(function (a, b) { return b.favorite - a.favorite; }), function (d) { return d.key; }).enter()
+        .append('span')
+        .attr('class', function (d) { return 'flair flair-' + d.key; });
+    var teamSVG = d3.select("#teamContainer").append('svg')
         .attr("id", "teams")
         .attr('width', 500)
-        .attr('height', 650);
+        .attr('height', 850);
+    var maxVal = Math.max(d3.max(data.teams, function (d) { return d.rooting; }), d3.max(data.teams, function (d) { return d.favorite; }));
+    var teamHeight = d3.scale.linear()
+        .domain([0, maxVal]).range([850, margin.bottom]);
+    var teamY = d3.svg.axis()
+        .orient("left")
+        .outerTickSize(0)
+        .innerTickSize(-300)
+        .tickPadding(10)
+        .scale(teamHeight);
+    teamSVG.append('g')
+        .attr('class', 'y axis')
+        .attr('transform', 'translate(175, -' + margin.bottom + ')')
+        .call(teamY);
+    teamY.innerTickSize(0).orient("right");
+    teamSVG.append('g')
+        .attr('class', 'y axis')
+        .attr('transform', 'translate(475, -' + margin.bottom + ')')
+        .call(teamY);
+    var newTeams = teamSVG.selectAll('g.team')
+        .data(data.teams, function (d) { return d.team; }).enter()
+        .append('g')
+        .attr('class', 'team')
+        .attr('transform', 'translate(0, -' + margin.bottom + ')');
+    newTeams.append('text')
+        .attr('x', 170)
+        .attr('y', function (d) { return teamHeight(d.favorite); })
+        .attr('dy', ".35em")
+        .style('text-anchor', 'end')
+        .text(function (d) { return d.team; });
+    newTeams.append('line')
+        .attr('x1', 175)
+        .attr('x2', 475)
+        .attr('y1', function (d) { return teamHeight(d.favorite); })
+        .attr('y2', function (d) { return teamHeight(d.rooting); })
+        .style('stroke', '#f00')
+        .style('stroke-width', 2);
 });
 console.log("asdfasdfasdf!");
 //# sourceMappingURL=app.js.map

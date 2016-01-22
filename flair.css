@@ -1,0 +1,148 @@
+#teamimgs {
+	float: left;
+	width: 33px;
+}
+
+.flair {
+	display: inline-block;
+	width: 33px;
+	height: 22px;
+	overflow: hidden;
+	vertical-align: middle;
+	border-color: transparent;
+	background-color: transparent;
+	line-height: 18px;
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+
+.flair:before {
+	width: 33px;
+	height: 22px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-image: url("team-logos.png");
+	vertical-align: middle;
+	margin-right: 0px;
+	content: "";
+}
+
+.flair-76ers:before {
+	background-position: 0px 0px;
+}
+
+.flair-bucks:before {
+	background-position: -33px 0px; 
+}
+
+.flair-bulls:before {
+	background-position: -66px 0px;
+}
+
+.flair-cavs:before {
+	background-position: 0px -22px;
+}
+
+.flair-celtics:before {
+	background-position: -33px -22px;
+}
+
+.flair-clippers:before {
+	background-position: -66px -22px;
+}
+
+.flair-grizzlies:before {
+	background-position: 0px -44px;
+}
+
+.flair-hawks:before {
+	background-position: -33px -44px;
+}
+
+.flair-heat:before {
+	background-position: -66px -44px;
+}
+
+.flair-pelicans:before {
+	background-position: 0px -66px;
+}
+
+.flair-jazz:before {
+	background-position: -33px -66px;
+}
+
+.flair-kings:before {
+	background-position: -66px -66px;
+}
+
+.flair-knicks:before {
+	background-position: 0px -88px;
+}
+
+.flair-lakers:before {
+	background-position: -33px -88px;
+}
+
+.flair-magic:before {
+	background-position: -66px -88px;
+}
+
+.flair-mavs:before {
+	background-position: 0px -110px;
+}
+
+.flair-nuggets:before {
+	background-position: -33px -110px;
+}
+
+.flair-raptors:before {
+	background-position: -66px -110px;
+}
+
+.flair-blazers:before {
+	background-position: 0px -132px;
+}
+
+.flair-warriors:before {
+	background-position: -33px -132px;
+}
+
+.flair-twolves:before {
+	background-position: -66px -132px;
+}
+
+.flair-thunder:before {
+	background-position: 0px -154px;
+}
+
+.flair-suns:before {
+	background-position: -33px -154px;
+}
+
+.flair-spurs:before {
+	background-position: -66px -154px;
+}
+
+.flair-rockets:before {
+	background-position: 0px -176px;
+}
+
+.flair-sonics:before {
+	background-position: -33px -176px;
+}
+
+.flair-njnets:before {
+	background-position: -66px -176px;
+}
+
+.flair-wizards:before {
+	background-position: 0px -198px;
+}
+
+.flair-nets:before {
+	background-position: -33px -198px;
+}
+
+.flair-hornets:before {
+	background-position: -66px -198px;
+}

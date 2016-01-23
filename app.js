@@ -203,7 +203,7 @@ d3.json('data.json', function (err, data) {
         .on('mouseout', teamMouseout);
     var teamSVG = d3.select("#teamContainer").append('svg')
         .attr("id", "teams")
-        .attr('width', 500)
+        .attr('width', 510)
         .attr('height', 900);
     d3.select("#teamContainer")
         .append('div')
@@ -255,7 +255,7 @@ d3.json('data.json', function (err, data) {
         .attr('class', 'teamlabel')
         .style('opacity', 0);
     newLabels.append('text')
-        .attr('x', 170)
+        .attr('x', 168)
         .attr('y', function (d) { return teamHeight(d.favorite); })
         .attr('dy', ".35em")
         .style('text-anchor', 'end')

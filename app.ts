@@ -296,7 +296,7 @@ d3.json('data.json', (err, data: allData) => {
     
     var teamSVG = d3.select("#teamContainer").append('svg')    
         .attr("id", "teams")
-        .attr('width', 500)
+        .attr('width', 510)
         .attr('height', 900);
                 
    d3.select("#teamContainer")
@@ -356,7 +356,7 @@ d3.json('data.json', (err, data: allData) => {
         .style('opacity', 0);             
     
     newLabels.append('text')
-        .attr('x', 170)
+        .attr('x', 168)
         .attr('y', d => teamHeight(d.favorite))
         .attr('dy', ".35em")
         .style('text-anchor', 'end')

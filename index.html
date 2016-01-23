@@ -9,15 +9,20 @@
 	
     <!-- boostrap -->
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" />
 
 	<link rel="stylesheet" href="flair.css" />
 	<style type="text/css">
+        
 		.navbar-brand > img {
             position: relative;
             top: -7px;
             padding-right: 15px;
+        }
+        
+        .container > div {
+            padding-top: 50px;
         }
 		
 		g.bars > rect {
@@ -62,8 +67,8 @@
     
 	</style>
 </head>
-<body>
-	<nav class="navbar navbar-default" role="navigation">
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
@@ -80,6 +85,11 @@
 			
 			<div class="colapse navbar-collapse" id="navbar-collapse-1">
 				<ul class="nav navbar-nav">
+                    <li><a href="#questionContainer">Survey Questions</a></li>
+                    <li><a href="#anovaContainer">Survey Statistics</a></li>
+                    <li><a href="#teamContainer">Team Bandwagoning</a></li>
+				</ul>
+                <ul class="nav navbar-nav pull-right">
 					<li><a href="https://www.reddit.com/r/nba/comments/3tuvh6/help_me_understand_online_communication_in_rnba/" target="_blank">Original Thread</a></li>
 				</ul>
 			</div>
@@ -96,7 +106,9 @@
             
         </div>
 	</div>	
-	
+        
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	<script type="text/javascript" src="colorbrewer.js"></script>
 	<script type='text/javascript' src="app.js"></script>

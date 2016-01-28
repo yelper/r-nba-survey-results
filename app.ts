@@ -78,6 +78,16 @@ function wrap(text, width) {
   });
 }
 
+// with thanks to <http://bl.ocks.org/mbostock/4b66c0d9be9a0d56484e>
+function addBackingRect(toSelection: d3.Selection<any>, beforeSelection: string, padding: number) {
+    return toSelection.insert("rect", beforeSelection)
+        .datum(function() { return this.nextSibling.getBBox(); })
+        .attr('x', d => d.x - padding)
+        .attr('y', d => d.y - padding)
+        .attr('width', d => d.width + 2 * padding)
+        .attr('height', d => d.height + 2 * padding);
+}
+
 d3.json('data.json', (err, data: allData) => {
     var newQuestions = d3.select("#questionContainer").selectAll("div.question")
         .data(data.questions, d => d.key).enter()
@@ -262,26 +272,22 @@ d3.json('data.json', (err, data: allData) => {
                 return "p = " + d.p_value
             });
             
-        // with thanks to <http://bl.ocks.org/mbostock/4b66c0d9be9a0d56484e>
-        var labelPadding = 3;
-        sigGroup.insert("rect", "text")
-            .datum(function() { return this.nextSibling.getBBox(); })
-            .attr('x', d => d.x - labelPadding)
-            .attr('y', d => d.y - labelPadding)
-            .attr('width', d => d.width + 2 * labelPadding)
-            .attr('height', d => d.height + 2 * labelPadding);
+        addBackingRect(sigGroup, 'text', 3);
     });
     
     var teamMouseover = function(d) {
+        d3.selectAll('.team').sort((a, b) => a.key == d.key ? 1 : -1)
         d3.selectAll('.flair-' + d.key).style('opacity', 1);
         d3.select('.team-' + d.key + " > g.teamlabel").style('opacity', 1);  
         d3.select('.team-' + d.key + " > line").style('stroke', '#f00');
+        d3.select('.team-' + d.key + " > .bandwagon").style('opacity', 1)
    };
    
    var teamMouseout = function(d) {
         d3.selectAll('.flair-' + d.key).style('opacity', null);  
         d3.select('.team-' + d.key + " > g.teamlabel").style('opacity', 0);
         d3.select('.team-' + d.key + " > line").style('stroke', '#aaa');
+        d3.select('.team-' + d.key + " > .bandwagon").style('opacity', 0)
    };
     
     d3.select("#teamContainer")
@@ -296,7 +302,7 @@ d3.json('data.json', (err, data: allData) => {
     
     var teamSVG = d3.select("#teamContainer").append('svg')    
         .attr("id", "teams")
-        .attr('width', 510)
+        .attr('width', 540)
         .attr('height', 900);
                 
    d3.select("#teamContainer")
@@ -310,6 +316,7 @@ d3.json('data.json', (err, data: allData) => {
             .on('mouseover', teamMouseover)
             .on('mouseout', teamMouseout);
 
+    var colors = ['#66c2a5', '#fc8d62'];
     var maxVal = Math.max(d3.max(data.teams, d => d.rooting), d3.max(data.teams, d => d.favorite));
     var teamHeight = d3.scale.linear()
         .domain([0, maxVal]).range([850, margin.bottom]);
@@ -321,28 +328,36 @@ d3.json('data.json', (err, data: allData) => {
         .scale(teamHeight);
     teamSVG.append('g')
         .attr('class', 'y axis')
-        .attr('transform', 'translate(175, -' + margin.bottom + ')')
-        .call(teamY);
+        .attr('transform', 'translate(210, -' + margin.bottom + ')')
+        .call(teamY)
+        .select('.domain')
+            .style('stroke', colors[0]);
     
     teamY.innerTickSize(0).orient("right");
     teamSVG.append('g')
         .attr('class', 'y axis')
-        .attr('transform', 'translate(475, -' + margin.bottom + ')')
-        .call(teamY);
+        .attr('transform', 'translate(510, -' + margin.bottom + ')')
+        .call(teamY)
+        .select('.domain')
+            .style('stroke', colors[1]);
         
     teamSVG.append('text')
-        .attr('x', 175)
+        .attr('x', 210)
         .attr('y', 850)
         .attr('dy', "0.71em")
         .style('text-anchor', 'middle')
+        .style('font-weight', 500)
+        .style('fill', colors[0])
         .text('# favorite team');
         
     teamSVG.append('text')
-        .attr('x', 475)
+        .attr('x', 510)
         .attr('y', 850)
         .attr('dy', "0.71em")
         .attr('dx', "1.5em")
         .style('text-anchor', 'end')
+        .style('font-weight', 500)
+        .style('fill', colors[1])
         .text('# rooting for this year');
         
     var newTeams = teamSVG.selectAll('g.team')
@@ -356,30 +371,57 @@ d3.json('data.json', (err, data: allData) => {
         .style('opacity', 0);             
     
     newLabels.append('text')
-        .attr('x', 168)
+        .attr('x', 178)
         .attr('y', d => teamHeight(d.favorite))
         .attr('dy', ".35em")
         .style('text-anchor', 'end')
         .text(d => d.team);
         
-    var labelPadding = 3;
-    newLabels.insert("rect", "text")
-        .datum(function() { return this.nextSibling.getBBox(); })
-        .attr('x', d => d.x - labelPadding)
-        .attr('y', d => d.y - labelPadding)
-        .attr('width', d => d.width + 2 * labelPadding)
-        .attr('height', d => d.height + 2 * labelPadding);
-        
     newTeams.append('line')
-        .attr('x1', 175)
-        .attr('x2', 475)
+        .attr('x1', 210)
+        .attr('x2', 510)
         .attr('y1', d => teamHeight(d.favorite))
         .attr('y2', d => teamHeight(d.rooting))
         .style('stroke', '#aaa')
         .style('stroke-width', 3)
         .on('mouseover', teamMouseover)
-        .on('mouseout', teamMouseout);        
+        .on('mouseout', teamMouseout);
+        
+    var bandwagonLabel = newTeams.append('g')
+        .attr('class', 'bandwagon')
+        .style('opacity', 0);
+        
+    bandwagonLabel.append('text')
+        .attr('x', 360)
+        .attr('y', d => (teamHeight(d.favorite) + teamHeight(d.rooting)) / 2)
+        .attr('dy', "-0.5em")
+        .style('text-anchor', 'middle')
+        .style('font-size', 24)
+        .style('font-weight', 500)
+        .style('fill', '#f00')
+        .text(d => d.rooting - d.favorite);
+        
+    bandwagonLabel.append('text')   
+        .attr('class', 'favlabel')
+        .attr('x', 200)
+        .attr('y', d => teamHeight(d.favorite))
+        .attr('dy', '0.35em')
+        .style('text-anchor', 'end')
+        .style('fill', colors[0])
+        .text(d => d.favorite);
+        
+    bandwagonLabel.append('text')   
+        .attr('class', 'rootlabel')
+        .attr('x', 520)
+        .attr('y', d => teamHeight(d.rooting))
+        .attr('dy', '0.35em')
+        .style('fill', colors[1])
+        .text(d => d.rooting);
+
+    addBackingRect(bandwagonLabel, ".rootlabel", 6);
+    addBackingRect(bandwagonLabel, ".favlabel", 6);
+    
 });
 
-console.log("asdfasdfasdf!");
+console.log("blarggghhhh stop looking here!  Check out the GitHub repo instead: https://github.com/yelper/r-nba-survey-results");
 

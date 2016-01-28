@@ -35,8 +35,8 @@
             padding-top: 50px;
         }
 		
-		p.expl {
-			margin-bottom: 30px;
+		.expl {
+			margin: 15px 0 35px;
 		}
 		
 		g.bars > rect {
@@ -74,14 +74,14 @@
 			shape-rendering: crispEdges;			
 		}
 		
-		g.sigs > rect, g.teamlabel > rect {
+		g.sigs > rect, g.teamlabel > rect, g.bandwagon > rect {
 			fill: #fff;
 			stroke: transparent;
 		}
     
 	</style>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body data-spy="scroll" data-target=".navbar" data-offset="60">
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -112,15 +112,30 @@
 	<div class="container">
 		<div id="questionContainer">
 			<h1>Survey Questions</h1>
-			<p class="expl">asdfasdfasdf oaksdfo aksdfok asdofk </p>
+			<div class="expl">
+				<p>The below graphs show the 731 responses to the <a href="https://docs.google.com/forms/d/1iQfQy8WuX3bvhQWlwn1zu7MZKmDIwHjDUhYBBYY9YDY/viewform" target="_blank">original survey</a>.</p>
+				<p>The first two questions bin a response and are the independent variables for the statistical analysis later.  The next six questions concern how up-to-date people feel to the NBA.  The next five gauge social connections to the NBA environment on /r/nba.  The last six questions concern engagement with NBA basketball.</p>
+			</div>
 		</div>
         <div id="anovaContainer">
-            
+           	<h1>Survey Statistics</h1>
+			<div class="expl">
+				<p>Given how people <strong>participate in other online communities</strong> (lighter shade does not, darker does) and <strong>talks basketball in daily life</strong> (blue does not talk, green does), how does that affect how people interact and feel current with the NBA?</p>
+				<p><em>Statistical bullshit:</em> Although the questions were designed to elicit responses on three scales (current with NBA, interaction in /r/nba, feeling a part of the NBA community), factor analysis yielded five unique scales (from no inflection point in the Scree test, so utilizing the Kaiser criterion yielded five components with eigenvalues above 1.0).  None of the scales met the threshold for Chronbach's &alpha; of 0.7 (0.68, 0.67, 0.54, 0.51, 0.51), probably because this was my first time trying to write consistent questions for a survey.</p>
+				<p>Since the survey was a between-subjects design (a person can only answer questions from a unique combination of independent variables), a two-way ANOVA was performed for all five scales.  Two of the scales (below) yielded statistically significant differences between groups.  Red error bars show standard error.  Significance with p &lt; 0.05 are shown in red.</p>
+			</div>
         </div>
         <div id="teamContainer">
-            
+            <h1>Team Bandwagoning</h1>
+			<div class="expl">
+				<p>People have favorite teams, but they also like to root for other teams.  Which teams have fans who are jumping on the bandwagon, and which people are jumping ship?</p>
+				<p><strong>Mouseover (or tap on mobile) the team logos</strong> (ordered by each axis) to highlight the corresponding line.  The left axis describes the number of people who have that team as their favorite, and the right axis has the number of people rooting for that team this year.  The higher the slope of the line, the more the bandwagon effect.</p>
+			</div>
         </div>
-	</div>	
+		<footer style="clear: both;">
+			&copy; 2016 Alper Sarikaya &mdash; <a href="https://github.com/yelper/r-nba-survey-results/blob/master/LICENSE" target="_blank">MIT License</a>.  TypeScript code available at the <a href="https://github.com/yelper/r-nba-survey-results" target="_blank">GitHub repo</a>.
+		</footer>
+	</div>
         
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

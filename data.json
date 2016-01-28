@@ -715,7 +715,7 @@
 		{
 			"key": "current_with_league",
 			"title": "Staying current with the NBA",
-			"desc": "<p>A combination of the scales that ask about staying current with the NBA, separated by responses to the dependent variables of talking basketball in real-life and being part of other online communities.</p><p style='color: #333;'>One is <strong>much less likely</strong> to stay current with the NBA if they do not talk basketball in real-life but are part of other online communities.</p><p>For a two-way ANOVA of bball_rl &times; online_social, <i>F</i>(3, 728) = 4.47, p = 0.035.</p>",
+			"desc": "<p>A combination of the scales that ask about staying current with the NBA.</p><p style='color: #333;'>One is <strong>much less likely</strong> to stay current with the NBA if they do not talk basketball in real-life but are part of other online communities.</p><p>For a two-way ANOVA of bball_rl &times; online_social, <i>F</i>(3, 728) = 4.47, p = 0.035.</p>",
 			"data": [
 				{
 					"key": "0,0",

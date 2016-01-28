@@ -12,4 +12,7 @@ The JavaScript code is written in TypeScript and files are included to build the
 
 ### Credits
 
-* /r/nba for the small team icons (images and CSS)
+* [/r/nba](http://reddit.com/r/nba) for the small team icons (images and CSS)
+* [Bootstrap](http://getbootstrap.com) for the UI components
+* [D3.js](http://d3js.org) for the data visualization
+* [TypeScript](http://www.typescriptlang.org/) for finally making JavaScript type-safe

@@ -6,6 +6,10 @@ Two independent variables collected from each respondent (in a between-subjects 
 
 This survey was administered to complete the requirements for the survey and data analysis assignments for CS 770 (Research Methods in HCI) at the University of Wisconsin-Madison in Fall 2015.
 
+### Demo
+
+The results are live on my homepage: http://pages.cs.wisc.edu/~sarikaya/personal/bball-survey.
+
 ### Building
 
 The JavaScript code is written in TypeScript and files are included to build the `.ts` file with [Visual Studio Code](https://code.visualstudio.com/).  To build the code, clone this repository, open the folder in VSC, make your edits to `app.ts`, press CTRL+SHIFT+B to build the code into JavaScript.  Navigate to `index.html` from a booted webserver (e.g. `python -m SimpleHTTPServer`).

@@ -81,6 +81,11 @@ d3.json('data.json', function (err, data) {
             default:
                 colorScale.range(['steelblue']);
         }
+        // short-circuit colorScale for non-diverging scales
+        if (["env6", "env1"].filter(function (v) { return v == qd.key; }).length != 0)
+            colorScale.range(colorbrewer.BuGn[7]);
+        if (qd.key == "league_aware1")
+            colorScale.range(colorbrewer.BuGn[5]);
         var barGroup = thisSVG.selectAll('g.bars')
             .data(qd.data, function (d) { return d.key.toString(); }).enter()
             .append('g')
